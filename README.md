@@ -1,2 +1,2 @@
 # yalr-vim
-syntax highlight for yalr files
+syntax highlight for [yalr](https://github.com/mhhollomon/yalr) files
