@@ -11,6 +11,7 @@ syntax keyword yalrKeywords
     \ associativity
     \ termset
     \ precedence
+    \ @cfold @cmatch
 
 
 syntax case match
@@ -32,9 +33,10 @@ syntax region yalrTypeString matchgroup=yalrTypeString start="<" end=">" contain
 " control over the c++ file type. But thats above my
 " level of vim wizardry at the moment..
 "
+"syntax include @CCP syntax/cpp.vim
 syntax keyword yalrLexeme    contained lexeme
-syntax region  yalrActionString start="<%{" end="}%>" contains=yalrActionVar,yalrLexeme
 syntax match   yalrActionVar contained "_v[0-9][0-9]*"
+syntax region  yalrActionString start="<%{" end="}%>" contains=yalrActionVar,yalrLexeme
 
 highlight default link yalrKeywords Keyword
 highlight default link yalrSlashComment Comment
